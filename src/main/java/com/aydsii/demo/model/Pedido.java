@@ -1,4 +1,4 @@
-package com.aydsii.demo.model;
+package com.example.grupo13.model;
 
 import java.time.LocalDate;
 
@@ -10,6 +10,9 @@ public class Pedido {
     private EstadosPedido estado;
     private String destino;
     private String observacion;
+
+    // Pedido 1 ---> 0..1 Reclamo
+    private Reclamo reclamo;
 
     public Pedido() {
     }
@@ -32,7 +35,14 @@ public class Pedido {
 
     // 1.1.2 generarReclamo -> 1.1.2.1 <<create>> Reclamo
     public Reclamo generarReclamo(String motivo, String descripcion, String evidencia) {
-        return new Reclamo(motivo, descripcion, evidencia);
+        Reclamo nuevo = new Reclamo(motivo, descripcion, evidencia);
+        this.reclamo = nuevo;
+        return nuevo;
+    }
+
+    // 1.1.1.3 obtenerReclamo(): devuelve el reclamo del pedido (null si no tiene)
+    public Reclamo obtenerReclamo() {
+        return reclamo;
     }
 
     public String getId() {

@@ -1,4 +1,4 @@
-package com.aydsii.demo.model;
+package com.example.grupo13.model;
 
 public class Producto {
 
@@ -62,5 +62,24 @@ public class Producto {
 
     public void setStockProducto(int stockProducto) {
         this.stockProducto = stockProducto;
+    }
+
+    // Dos productos son el mismo si tienen el mismo id.
+    // Necesario para que List.contains(producto) funcione con objetos recibidos por JSON.
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Producto otro = (Producto) o;
+        return id == otro.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Long.hashCode(id);
     }
 }

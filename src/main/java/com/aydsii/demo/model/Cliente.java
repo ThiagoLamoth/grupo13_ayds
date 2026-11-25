@@ -1,4 +1,4 @@
-package com.aydsii.demo.model;
+package com.example.grupo13.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +14,9 @@ public class Cliente {
     // Cliente 1 ---> 1..* Pedido
     private List<Pedido> pedidos = new ArrayList<>();
 
+    // Cliente 1 ---> 1..* Producto ("favoritos : List<Producto>" del diagrama de secuencia)
+    private List<Producto> favoritos = new ArrayList<>();
+
     public Cliente() {
     }
 
@@ -23,6 +26,29 @@ public class Cliente {
         this.email = email;
         this.telefono = telefono;
         this.contrasenia = contrasenia;
+    }
+
+    // 1.1.1 estaEnFavoritos(producto) -> 1.1.1.1 contains(producto)
+    public boolean estaEnFavoritos(Producto producto) {
+        return favoritos.contains(producto);
+    }
+
+    // 1.1.2 agregarFavorito(producto) -> 1.1.2.1 add(producto)
+    public void agregarFavorito(Producto producto) {
+        favoritos.add(producto);
+    }
+
+    // 1.1.1 obtenerReclamos(): arma el historial recorriendo los pedidos del cliente
+    public List<Reclamo> obtenerReclamos() {
+        List<Reclamo> historial = new ArrayList<>();                 // 1.1.1.1 <<create>> historial
+        for (int i = 0; i < pedidos.size(); i++) {
+            Pedido pedido = pedidos.get(i);                          // 1.1.1.2 get(i)
+            Reclamo reclamo = pedido.obtenerReclamo();               // 1.1.1.3 obtenerReclamo()
+            if (reclamo != null) {                                   // un pedido puede no tener reclamo (0..1)
+                historial.add(reclamo);                              // 1.1.1.4 add(reclamo)
+            }
+        }
+        return historial;
     }
 
     public String getApellido() {
@@ -71,5 +97,9 @@ public class Cliente {
 
     public void setPedidos(List<Pedido> pedidos) {
         this.pedidos = pedidos;
+    }
+
+    public List<Producto> getFavoritos() {
+        return favoritos;
     }
 }
