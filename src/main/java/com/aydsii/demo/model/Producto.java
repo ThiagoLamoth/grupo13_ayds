@@ -1,4 +1,4 @@
-package com.example.grupo13.model;
+package com.aydsii.demo.model;
 
 public class Producto {
 

@@ -1,4 +1,4 @@
-package com.example.grupo13.service;
+package com.aydsii.demo.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,8 +6,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.example.grupo13.model.Cliente;
-import com.example.grupo13.model.Producto;
+import com.aydsii.demo.model.Cliente;
+import com.aydsii.demo.model.Producto;
 
 @Service
 public class FavoritoService {

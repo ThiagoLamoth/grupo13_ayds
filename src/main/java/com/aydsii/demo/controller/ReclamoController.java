@@ -1,4 +1,4 @@
-package com.example.grupo13.controller;
+package com.aydsii.demo.controller;
 
 import java.util.List;
 
@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.grupo13.model.Pedido;
-import com.example.grupo13.model.Reclamo;
-import com.example.grupo13.service.ReclamoService;
-import com.example.grupo13.util.SesionCliente;
+import com.aydsii.demo.model.Pedido;
+import com.aydsii.demo.model.Reclamo;
+import com.aydsii.demo.service.ReclamoService;
+import com.aydsii.demo.util.SesionCliente;
 
 @RestController
 @RequestMapping("/api/reclamos")

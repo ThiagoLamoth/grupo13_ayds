@@ -1,4 +1,4 @@
-package com.example.grupo13.controller;
+package com.aydsii.demo.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.grupo13.model.Producto;
-import com.example.grupo13.service.FavoritoService;
-import com.example.grupo13.util.SesionCliente;
+import com.aydsii.demo.model.Producto;
+import com.aydsii.demo.service.FavoritoService;
+import com.aydsii.demo.util.SesionCliente;
 
 @RestController
 @RequestMapping("/api/favoritos")

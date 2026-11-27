@@ -1,13 +1,13 @@
-package com.example.grupo13.util;
+package com.aydsii.demo.util;
 
 import java.time.LocalDate;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.example.grupo13.model.Cliente;
-import com.example.grupo13.model.EstadosPedido;
-import com.example.grupo13.model.Pedido;
+import com.aydsii.demo.model.Cliente;
+import com.aydsii.demo.model.EstadosPedido;
+import com.aydsii.demo.model.Pedido;
 
 /**
  * Patrón Singleton: existe una única sesión de cliente en toda la aplicación.

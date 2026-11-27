@@ -1,4 +1,4 @@
-package com.example.grupo13.service;
+package com.aydsii.demo.service;
 
 import java.util.List;
 
@@ -8,10 +8,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.example.grupo13.model.Cliente;
-import com.example.grupo13.model.Empleado;
-import com.example.grupo13.model.Pedido;
-import com.example.grupo13.model.Reclamo;
+import com.aydsii.demo.model.Cliente;
+import com.aydsii.demo.model.Empleado;
+import com.aydsii.demo.model.Pedido;
+import com.aydsii.demo.model.Reclamo;
 
 @Service
 public class ReclamoService {
