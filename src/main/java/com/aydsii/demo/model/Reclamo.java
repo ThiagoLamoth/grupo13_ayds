@@ -14,7 +14,7 @@ public class Reclamo {
     private String descripcion;
     private String evidencia;
     private String gravedad;
-    private String estado;
+    private EstadosReclamo estado;
 
     // 1.1.2.1 <<create>> Reclamo(motivo, descripcion, evidencia)
     public Reclamo(String motivo, String descripcion, String evidencia) {
@@ -24,7 +24,7 @@ public class Reclamo {
         this.descripcion = descripcion;
         this.evidencia = evidencia;
         this.gravedad = "SIN_ASIGNAR"; // la define luego la empresa, no el cliente
-        this.estado = EstadosReclamo.PENDIENTE.name();
+        this.estado = EstadosReclamo.PENDIENTE;
     }
 
     public long getId() {
@@ -51,7 +51,7 @@ public class Reclamo {
         return gravedad;
     }
 
-    public String getEstado() {
+    public EstadosReclamo getEstado() {
         return estado;
     }
 
